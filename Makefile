@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -I $(IDIR) -Wall -Wno-missing-braces -Wconversion -pedantic -std=c11
 TARGET = snake.exe
 
-__OBJS = main.o
+__OBJS = main.o console.o board.o
 OBJS = $(patsubst %.o,$(ODIR)/%.o,$(__OBJS))
 
 run: all
