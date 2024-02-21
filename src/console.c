@@ -12,3 +12,7 @@ bool clear_console(HANDLE hconsole, CONSOLE_SCREEN_BUFFER_INFO console_info) {
     SetConsoleCursorPosition(hconsole, topleft);
     return true;
 }
+
+void restore_console(HANDLE hconsole, CONSOLE_SCREEN_BUFFER_INFO console_info) {
+    SetConsoleTextAttribute(hconsole, console_info.wAttributes);
+}
